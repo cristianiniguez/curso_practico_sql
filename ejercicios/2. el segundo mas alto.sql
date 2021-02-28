@@ -34,4 +34,11 @@ WHERE colegiatura = (
     WHERE tutor_id = 20
     ORDER BY colegiatura DESC
     LIMIT 1 OFFSET 1
-  )
+  );
+-- Seleccionando la segunda mitad de los alumnos
+SELECT ROW_NUMBER() OVER() AS row_id,
+  *
+FROM platzi.alumnos OFFSET (
+    SELECT COUNT(*) / 2
+    FROM platzi.alumnos
+  );
