@@ -20,3 +20,13 @@ FROM (
     FROM platzi.alumnos
   ) AS alumnos_con_anho
 WHERE anho_incorporacion = 2019;
+-- Tarea: seleccionar alumnos incorporados en mayo del 2018
+SELECT *
+FROM (
+    SELECT *,
+      DATE_PART('YEAR', fecha_incorporacion) AS anho_incorporacion,
+      DATE_PART('MONTH', fecha_incorporacion) AS mes_incorporacion
+    FROM platzi.alumnos
+  ) AS alumnos_con_anho
+WHERE anho_incorporacion = 2018
+  AND mes_incorporacion = 5;
