@@ -19,3 +19,11 @@ WHERE id IN (
     WHERE tutor_id = 30
       AND carrera_id = 31
   );
+-- Seleccionando los alumnos que no tengan cierto tutor (usando id's)
+SELECT *
+FROM platzi.alumnos
+WHERE id NOT IN (
+    SELECT id
+    FROM platzi.alumnos
+    WHERE tutor_id = 30
+  );
