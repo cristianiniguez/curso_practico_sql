@@ -31,3 +31,23 @@ SELECT ISEMPTY(numrange(1, 5));
 SELECT *
 FROM platzi.alumnos
 WHERE int4range(10, 20) @> tutor_id;
+-- Tarea: Interseccion entre IDs de tutores y de carreras
+SELECT numrange(
+    (
+      SELECT MIN(tutor_id)
+      FROM platzi.alumnos
+    ),
+    (
+      SELECT MAX(tutor_id)
+      FROM platzi.alumnos
+    )
+  ) * numrange(
+    (
+      SELECT MIN(carrera_id)
+      FROM platzi.alumnos
+    ),
+    (
+      SELECT MAX(carrera_id)
+      FROM platzi.alumnos
+    )
+  );
