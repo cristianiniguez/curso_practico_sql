@@ -36,3 +36,6 @@ SELECT a.id,
 FROM platzi.alumnos AS a
   INNER JOIN generate_series(0, 10) AS s(a) ON s.a = a.carrera_id
 ORDER BY a.carrera_id;
+-- reto: triangulo con generate_series
+SELECT lpad('*', CAST(ordinality as int), '*')
+FROM generate_series(10, 2, -1) WITH ordinality;
