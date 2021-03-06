@@ -38,3 +38,9 @@ FROM (
   ) AS alumnos_with_row_id
 WHERE row_id <= 5
 ORDER BY carrera_id;
+-- funcion rpad
+SELECT rpad('sql', 15, '*');
+-- triangulo con rpad
+SELECT rpad('-', id, '*')
+FROM platzi.alumnos
+WHERE id < 10;
