@@ -1,6 +1,6 @@
 # Curso Práctico de SQL
 
-Avance del Curso Práctico de SQL de Platzi
+Avance del [Curso Práctico de SQL](https://platzi.com/clases/practico-sql/) de Platzi
 
 <p align='center'>
   <img src='https://static.platzi.com/media/achievements/badge-curso-sql-afdd3b08-e002-42c5-8637-d36ed13c956a.png' alt='logo_curso_practico_sql_platzi' />
